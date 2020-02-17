@@ -27,8 +27,8 @@ Things you may want to cover:
 
 |column|type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|string|null: false|
+|body|text|
+|image|string|
 |group_id|integer|null:false, foreign_key|
 |user_id|interger|null:false, foreign_key|
 
