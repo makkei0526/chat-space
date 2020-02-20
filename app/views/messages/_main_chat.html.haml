@@ -1,0 +1,28 @@
+
+.right-contents
+  .right-contents__groupname
+    .right-contents__groupname__left__box
+      %p test
+      %h1 Menber : keisuke
+    = link_to "#", class: 'right-contents__groupname__left__box__link' do
+      %p Edit
+  .right-contents__message
+    .right-contents__message__box
+      .right-contents__message__box__name
+        %p masa
+        %h1 2019/11/20(web) 17:43:01
+      .right-contents__message__box__comment
+        %p おはよう
+    .right-contents__message__box
+      .right-contents__message__box__name
+        %p masa
+        %h1 2019/11/20(web) 17:43:01
+      .right-contents__message__box__comment
+        %p おはよう
+  .right-contents__from
+    .right-contents__from__box
+      %input.right-contents__from__box__message-text{:type => "text", :placeholder => "type a message"}
+      %label{class: "right-contents__from__box__image"}
+        = icon('fas', 'image')
+        %input{type: "file", class: "right-contents__from__box__image__file"}
+    %input.right-contents__from__btn{type: "submit", value: "send"}
