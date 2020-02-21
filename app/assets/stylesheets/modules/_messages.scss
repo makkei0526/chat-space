@@ -21,9 +21,9 @@
         line-height: 20px;
         &__name {
           width: 200px;
+          color: $white;
           p {
             font-weight: bold;
-            color: $white;
           }
         }
         &__icon {
@@ -46,7 +46,7 @@
       }
     }
     &__group {
-      height: calc(100vh - 90px);
+      height: calc(100vh - 100px);
       background-color: #2f3e51;
      &__list {
        height: 91px;
@@ -58,10 +58,11 @@
          position: absolute;
          top: 20px;
          right: 20px;
-          p {
-            font-size: 15pz;
-            line-height: 15px;
-          }
+         color: $white;
+          // p {
+          //   font-size: 15pz;
+          //   line-height: 15px;
+          // }
         }
         &__message {
           height: 11px;
@@ -69,10 +70,11 @@
           position: absolute;
           top: 40px;
           right: 20px;
-          p {
-            font-size: 11px;
-            line-height: 11px;
-          }
+          color: $white;
+          // p {
+          //   font-size: 11px;
+          //   line-height: 11px;
+          // }
         }
       }
     }
