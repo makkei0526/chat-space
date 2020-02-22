@@ -1,28 +1,23 @@
 
 .right-contents
-  .right-contents__groupname
-    .right-contents__groupname__left__box
-      %p test
-      %h1 Menber : keisuke
-    = link_to "#", class: 'right-contents__groupname__left__box__link' do
-      %p Edit
+  .right-contents__group
+    .right-contents__group__name
+      .right-contents__group__name__box
+        =@group.name
+        %ul.menber-list
+          %li Menber:
+          - @group.users.each do |user|
+            %li
+            =user.name
+    .right-contents__group__edit
+      = link_to "Edit", edit_group_path(@group), {class: 'right-contents__group__edit__btn'}
   .right-contents__message
-    .right-contents__message__box
-      .right-contents__message__box__name
-        %p masa
-        %h1 2019/11/20(web) 17:43:01
-      .right-contents__message__box__comment
-        %p おはよう
-    .right-contents__message__box
-      .right-contents__message__box__name
-        %p masa
-        %h1 2019/11/20(web) 17:43:01
-      .right-contents__message__box__comment
-        %p おはよう
+    = render @messages
   .right-contents__from
-    .right-contents__from__box
-      %input.right-contents__from__box__message-text{:type => "text", :placeholder => "type a message"}
-      %label{class: "right-contents__from__box__image"}
-        = icon('fas', 'image')
-        %input{type: "file", class: "right-contents__from__box__image__file"}
-    %input.right-contents__from__btn{type: "submit", value: "send"}
+    = form_for [@group, @message], html: {class: 'right-contents__from__box'} do |f|
+      .right-contents__from__box__mask
+        = f.text_field :body, class: 'right-contents__from__box__mask__message-text', placeholder: 'type a message'
+        = f.label :image, class: 'right-contents__from__box__mask__image' do
+          = icon('fas', 'image')
+          = f.file_field :image, class: 'right-contents__from__box__mask__image__file'
+      = f.submit 'Send', class: 'right-contents__from__box__btn'
