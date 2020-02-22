@@ -59,10 +59,6 @@
          top: 20px;
          right: 20px;
          color: $white;
-          // p {
-          //   font-size: 15pz;
-          //   line-height: 15px;
-          // }
         }
         &__message {
           height: 11px;
@@ -71,10 +67,6 @@
           top: 40px;
           right: 20px;
           color: $white;
-          // p {
-          //   font-size: 11px;
-          //   line-height: 11px;
-          // }
         }
       }
     }
@@ -84,38 +76,35 @@
     background-color: $white;
     width: calc(100vw - 300px);
     height: 100vh;
-    &__groupname {
+    &__group {
       height: 100px;
+      padding: 0 40px;
       display: flex;
       justify-content: space-between;
-      &__left__box {
-        margin-left: 40px;
-        p {
-          color: #333333;
-          font-size: 20px;
+      position: relative;
+      &__name {
+        &__box {
           margin-top: 35px;
-        }
-        h1 {
-          color: #999999;
-          font-size: 12px;
-          margin-top: 15px;
+          .menber-list {
+            display: flex;
+            font-size: 12px;
+            color: #999999;
+            margin-top: 12px;
+            
+          }
         }
       }
-      &__left__box__link {
-        position: relative;
-        color: $litebule;
-        font-size: 16px;
-        p{
-          position: absolute;
-          right: 40px;
-          margin-top: 30px;
+      &__edit {
+        height: 40px;
+        width: 72px;
+        margin-top: 30px;
+        border: solid 1px $litebule;
+        &__btn {
+          color: $litebule;
           padding: 0 20px;
-          height: 40px;
           line-height: 40px;
-          border: solid 1px $litebule;
-        } 
+        }
       }
-      
     }
     &__message {
       height: calc(100vh - 190px);
@@ -153,32 +142,35 @@
       height: 90px;
       background-color: #d2d2d2;
       padding: 20px 40px;
-      display: flex;
       &__box {
-        @include length-width;
         display: flex;
-        position: relative;
-        &__message-text {
-          @include length-width;
-          padding: 0 40px 0 10px;
-        }
-        &__image {
-          font-size: 1.3rem;
-          position: absolute;
-          top:10px;
-          right: 10px;
-          &__file { 
-            display: none;
+        &__mask {
+          width: 100%;
+          position: relative;
+          &__message-text {
+           height: 50px;
+           width: 100%;
+           padding: 0 40px 0 10px;
+          color: #434a54;
+          }
+          &__image {
+            font-size: 1.3rem;
+            position: absolute;
+            top: 10px;
+            right:10px;
+            &__file {
+              display: none;
+            }
           }
         }
-      }
-      &__btn {
-        width: 100px;
-        height: 50px;
-        color: white;
-        background-color: $litebule;
-        padding: 0 30px;
-        margin-left: 15px;
+        &__btn {
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          background-color:$litebule;
+          margin-left: 15px;
+          color: $white;
+        }
       }
     }
   }  
