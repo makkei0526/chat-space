@@ -1,5 +1,5 @@
 
-.right-contents__message__box
+.right-contents__message__box{data: {id: message.id}}
   .right-contents__message__box__name
     .right-contents__message__box__name__user
       = message.user.name
@@ -9,4 +9,4 @@
     - if message.body.present?
       %p.right-contents__message__box__comment__body
         = message.body
-    = image_tag message.image.url, class: 'right-contents__message__box__comment_image' if message.image.present?
+    = image_tag message.image.url, class: 'right-contents__message__box__comment__image' if message.image.present?
