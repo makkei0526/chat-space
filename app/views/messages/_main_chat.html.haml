@@ -5,9 +5,9 @@
       .right-contents__group__name__box
         =@group.name
         %ul.menber-list
-          %li Menber:
+          %li Member:
           - @group.users.each do |user|
-            %li
+            %li.menber-list__name
             =user.name
     .right-contents__group__edit
       = link_to "Edit", edit_group_path(@group), {class: 'right-contents__group__edit__btn'}
